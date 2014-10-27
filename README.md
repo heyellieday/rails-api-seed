@@ -87,6 +87,12 @@ google_secret: "GOOGLE_SECRET"
 #mailcatcher config
 xip_host: "XIP_HOST"
 
+
+#Action Mailer
+user_mailer_from_email: "USER_MAILER_FROM_EMAIL"
+user_mailer_url: "USER_MAILER_URL"
+user_mailer_subject: "USER_MAILER_SUBJECT"
+
 ~~~
 These values be talked about in more detail in the following sections.
 
@@ -142,8 +148,8 @@ class UserMailer < ActionMailer::Base
   def welcome_email(user)
     @user = user
     @url  = ENV['user_mailer_url']
-    @site = ENV['user_mailer_site']
-    mail(to: @user.email, subject: @site)
+    @site = ENV['user_mailer_subject']
+    mail(to: @user.email, subject: @subject)
   end
 end
 ~~~
