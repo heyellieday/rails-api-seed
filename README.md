@@ -11,14 +11,14 @@ This seed project provides a preconfigured API-based Rails app, including helpfu
     * Account deletion
   * Support for [multiple user models](https://github.com/lynndylanhurley/devise_token_auth#using-multiple-models).
   * It is [secure](https://github.com/lynndylanhurley/devise_token_auth#security).
- *Preconfigured User Model and RESTful controller, integrated with the above Auth system (Controller coming Soon!)
+* Preconfigured User Model and RESTful controller, integrated with the above Auth system (Controller coming Soon!)
 * Cross-Domain Requests (CORS) using [rack-cors](https://github.com/intridea/omniauth) gem.
 * Enviroment Variables for secret keys using [figaro](https://github.com/plataformatec/devise) gem.
 * Postgres DB for development and production for easy deployment to Heroku.
 * Rest API helper client using [rest_client](https://github.com/plataformatec/devise) gem.
 * Easy development mail server using [mail-catcher](https://github.com/plataformatec/devise) gem.
 * Preconfigured mail sending service and welcome email template using [Action Mailer](http://guides.rubyonrails.org/action_mailer_basics.html)
-* [POW](http://pow.cx/) and [XIP.I0](http://xip.io/) integration for worry-free and accesible local development servers
+* [POW](http://pow.cx/),[XIP.I0](http://xip.io/) and [LocalTunnel](http://localtunnel.me) integration for worry-free and accesible local development servers.
 * And more!
 
 # [Live Demo](http://ng-token-auth-demo.herokuapp.com/)
@@ -153,3 +153,34 @@ class UserMailer < ActionMailer::Base
   end
 end
 ~~~
+
+###POW, XIP.IO, and LocalTunnel Setup
+POW helps you setup dev servers easily at a TLD .dev domain that can be accessed on your computer. XIP.IO makes those same servers available to other machines on your network, such as an ipad or mobile device. LocalTunnel makes your server available to the entire internet. No more being restricted to just testing on your local machine!
+
+####POW
+POW is very easy to setup and run. The following is taken from the POW website:
+
+To install or upgrade Pow, open a terminal and run this command:
+
+~~~bash
+curl get.pow.cx | sh
+~~~
+
+To set up a your Rails app, just symlink it into ~/.pow:
+
+~~~bash
+cd ~/.pow
+$ ln -s /path/to/myapp
+~~~
+That's i! POW is now set up for rails app.
+
+####XIP.IO
+
+To setup XIP with your Rails App, first locate your LAN IP address. Your XIP.IO address would be the following, if your app name was myapp and your LAN IP address was 10.0.1.43:
+
+~~~bash
+http://myapp.10.0.1.43.xip.io/
+~~~
+
+####LocalTunnel
+
