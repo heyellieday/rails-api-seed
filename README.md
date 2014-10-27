@@ -68,19 +68,24 @@ This will great an application.yml in your config folder. Copy the following sam
 postgress_db_name: "<RAILS APP NAME>"
 postgres_user: "<RAILS APP NAME>"
 
+
 #Omniauth Providers
-#
+
 #Facebook
 facebook_key: "FACEBOOK_KEY"
 facebook_secret: "FACEBOOK_SECRET"
-#
+
 #Github
 github_key: "GITHUB_KEY"
 github_secret: "GITHUB_SECRET"
-#
+
 #Google
 google_key: "GOOGLE_KEY"
 google_secret: "GOOGLE_SECRET"
+
+
+#mailcatcher config
+xip_host: "XIP_HOST"
 
 ~~~
 These values be talked about in more detail in the following sections.
