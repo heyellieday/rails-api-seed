@@ -127,5 +127,23 @@ Run your migrations, populating your database:
 rake db:migrate
 ~~~
 
-###Postgres Setup
+###Mailcatcher Setup
 
+###Action Mailer Setup
+
+In your config/application.yml file, replace the relevant environment variables to configure your welcome email. You may wish to customize the view at app/views/mailers/user_mailer.html.erb.
+The application.yml changes will affect this file:
+
+~~~ruby
+# app/mailers/user_mailer.rb
+class UserMailer < ActionMailer::Base
+  default from: ENV['user_mailer_from_email']
+
+  def welcome_email(user)
+    @user = user
+    @url  = ENV['user_mailer_url']
+    @site = ENV['user_mailer_site']
+    mail(to: @user.email, subject: @site)
+  end
+end
+~~~
