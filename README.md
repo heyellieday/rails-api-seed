@@ -11,10 +11,13 @@ This seed project provides a preconfigured Rails app based on the workflow of gi
     * Account deletion
   * Support for [multiple user models](https://github.com/lynndylanhurley/devise_token_auth#using-multiple-models).
   * It is [secure](#security).
- * Cross-Domain Requests (CORS) using [rack-cors](https://github.com/intridea/omniauth) gem.
- * Enviroment Variables for secret keys using [figaro](https://github.com/plataformatec/devise) gem.
- * Postgres DB for development and production for easy deployment to Heroku.
- * Rest API helper client using [rest_client](https://github.com/plataformatec/devise) gem.
+* Cross-Domain Requests (CORS) using [rack-cors](https://github.com/intridea/omniauth) gem.
+* Enviroment Variables for secret keys using [figaro](https://github.com/plataformatec/devise) gem.
+* Postgres DB for development and production for easy deployment to Heroku.
+* Rest API helper client using [rest_client](https://github.com/plataformatec/devise) gem.
+* Easy development mail server using [mail-catcher](https://github.com/plataformatec/devise) gem.
+* Preconfigured mail sending service and welcome email template using [Action Mailer](http://guides.rubyonrails.org/action_mailer_basics.html)
+* And more!
 
 # [Live Demo](http://ng-token-auth-demo.herokuapp.com/)
 
@@ -35,14 +38,32 @@ This seed app leverages the following gems:
 * [mailcatcher](https://github.com/intridea/omniauth)
 
 # Installation
-Add the following to your `Gemfile`:
+Clone the repo to your development folder::
 
-~~~ruby
-gem 'devise_token_auth'
+~~~bash
+git  clone https://github.com/heyellieday/rails-api-seed/
 ~~~
 
-Then install the gem using bundle:
+Then do a quick bundle install:
 
 ~~~bash
 bundle install
 ~~~
+
+There are then some configuration steps to complete, as outlined in the following section
+
+# Configuration
+ #Postgres Setup
+ Clone the repo to your development folder:
+ 
+ ~~~bash
+ git  clone https://github.com/heyellieday/rails-api-seed/
+ ~~~
+ 
+ Then do a quick bundle install:
+ 
+ ~~~bash
+ bundle install
+ ~~~
+
+There are then some configuration steps to complete, as outlined in the following section
