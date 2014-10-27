@@ -69,16 +69,16 @@ postgres_user: "<RAILS APP NAME>"
 #Omniauth Providers
 #
 #Facebook
-#facebook_key: "FACEBOOK_KEY"
-#facebook_secret: "FACEBOOK_SECRET"
+facebook_key: "FACEBOOK_KEY"
+facebook_secret: "FACEBOOK_SECRET"
 #
 #Github
-#github_key: "GITHUB_KEY"
-#github_secret: "GITHUB_SECRET"
+github_key: "GITHUB_KEY"
+github_secret: "GITHUB_SECRET"
 #
 #Google
-#google_key: "GOOGLE_KEY"
-#google_secret: "GOOGLE_SECRET"
+google_key: "GOOGLE_KEY"
+google_secret: "GOOGLE_SECRET"
 
 ~~~
 These values be talked about in more detail in the following sections.
@@ -120,4 +120,5 @@ Run your migrations, populating your database:
 rake db:migrate
 ~~~
 
+###Postgres Setup
 
