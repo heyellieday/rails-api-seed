@@ -53,17 +53,59 @@ bundle install
 There are then some configuration steps to complete, as outlined in the following section
 
 # Configuration
- #Postgres Setup
- Clone the repo to your development folder:
- 
- ~~~bash
- git  clone https://github.com/heyellieday/rails-api-seed/
- ~~~
- 
- Then do a quick bundle install:
- 
- ~~~bash
- bundle install
- ~~~
+###Figaro Setup
 
-There are then some configuration steps to complete, as outlined in the following section
+In your root project directory run:
+~~~bash
+figaro install
+~~~
+This will great an application.yml in your config folder. Copy the following sample config info into application.yml, replacing the current contents:
+
+~~~yml
+#Postgres DB config
+postgress_db_name: "<RAILS APP NAME>"
+postgres_user: "<RAILS APP NAME>"
+
+#
+
+~~~
+These values be talked about in more detail in the following sections.
+
+
+###Postgres Setup
+
+Install Postgres on your machine. If using OS X, follow this guide: [Installing Postgres via Homebrew](http://marcinkubala.wordpress.com/2013/11/11/postgresql-on-os-x-mavericks/)
+
+Once installed, from the terminal, create the Postgres DB:
+ 
+~~~bash
+initdb /usr/local/var/<NAME OF RAILS APP> -E utf8
+~~~
+ 
+Then start the Postgres server:
+ 
+~~~bash
+postgres -D /usr/local/var/<NAME OF RAILS APP>
+~~~
+
+In a new terminal tab, create a new user role:
+
+~~~bash
+createuser -d -P <NAME OF RAILS APP>
+~~~
+
+Update your application.yml file with the correct values for your Postgres config
+
+Then associate the new DB with the Rails app, in your root project directory:
+
+~~~bash
+rake db:create
+~~~
+
+Run your migrations, populating your database:
+
+~~~bash
+rake db:migrate
+~~~
+
+
