@@ -35,6 +35,12 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
+  # when using pow
+OmniAuth.config.full_host = "http://app-name.dev"
+
+# when using xip.io
+OmniAuth.config.full_host = "http://xxx.xxx.xxx.app-name.xip.io"
+
   config.action_mailer.default_url_options = { :host => ENV['xip_host'] }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { :address => ENV['xip_host'], :port => 1025 }
