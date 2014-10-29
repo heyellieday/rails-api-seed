@@ -17,7 +17,7 @@ This seed project provides a preconfigured API-based Rails app, including helpfu
 * Postgres DB for development and production for easy deployment to Heroku.
 * Rest API helper client using [rest_client](https://github.com/plataformatec/devise) gem.
 * Easy development mail server using [mail-catcher](https://github.com/plataformatec/devise) gem.
-* Preconfigured mail sending service and welcome email template using [Action Mailer](http://guides.rubyonrails.org/action_mailer_basics.html)
+* Preconfigured mail sending service and welcome email template using [Mailgun](http://www.mailgun.com/)
 * [POW](http://pow.cx/),[XIP.I0](http://xip.io/) and [LocalTunnel](http://localtunnel.me) integration for worry-free and accesible local development servers.
 * And more!
 
